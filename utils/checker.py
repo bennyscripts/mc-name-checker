@@ -5,10 +5,7 @@ swears = open("data/swears.txt", "r").read().split("\n")
 alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_"
 
 def is_in_swears(name):
-    for swear in swears:
-        if swear in name:
-            return True
-    return False
+    return name in swears
 
 def is_alpha(name):
     for char in name:
