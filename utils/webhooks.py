@@ -5,8 +5,16 @@ import easy_discord_webhooks
 from . import config
 
 http = httpx.Client()
-if config.get_available_webhook() != "": webhook = easy_discord_webhooks.Webhook(config.get_available_webhook())
-if config.get_updates_webhook() != "": updates_webhook = easy_discord_webhooks.Webhook(config.get_updates_webhook())
+try:
+    if config.get_available_webhook() != "": webhook = easy_discord_webhooks.Webhook(config.get_available_webhook())
+except Exception as e:
+    print(e)
+    webhook = ""
+try:
+    if config.get_updates_webhook() != "": updates_webhook = easy_discord_webhooks.Webhook(config.get_updates_webhook())
+except Exception as e:
+    print(e)
+    updates_webhook = ""
 if config.get_archives_webhook() != "": lists_webhooks = config.get_archives_webhook()
 
 def send_available(name):
