@@ -86,7 +86,7 @@ def main() -> None:
             console.unavailable(name)
             unavailable_names.append(name)
 
-        console.set_title(f"Available: {len(available_names)} | Unavailable: {len(unavailable_names)} | Checked: {checked}")
+        console.set_title(f"Available: {len(available_names)} - Unavailable: {len(unavailable_names)} - Checked: {checked}")
         checked += 1
 
         if checked % 50 == 0:
@@ -119,3 +119,4 @@ def main() -> None:
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, on_exit)
     main()
+    console.user_input("Press enter to exit...")
