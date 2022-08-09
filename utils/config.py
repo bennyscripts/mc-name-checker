@@ -2,14 +2,14 @@ import yaml
 import os
 
 def create_config():
-    config = {
-        "available_webhook": "",
-        "updates_webhook": "",
-        "archives_webhook": ""
-    }
-    with open("config.yml", 'w') as f:
-        yaml.dump(config, f)
-    return config
+    if not os.path.exists("config.yml"):
+        config = {
+            "available_webhook": "",
+            "updates_webhook": "",
+            "archives_webhook": ""
+        }
+        with open("config.yml", 'w') as f:
+            yaml.dump(config, f)
 
 def get_config():
     if not os.path.exists("config.yml"):
