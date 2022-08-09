@@ -2,3 +2,6 @@
 */__pycache__/*
 output/*
 icon.ico
+gen-icon.ico
+build.bat
+dist/*
