@@ -2,14 +2,15 @@ import time
 import os
 import signal
 
+from utils import config
 from utils import files
 
+config.create_config()
 files.check_files()
 
 from utils import webhooks as webhook
 from utils import checker
 from utils import console
-from utils import config
 
 archive_name = ""
 checked = 0

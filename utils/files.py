@@ -24,7 +24,7 @@ def check_files():
             f.write("")
 
     if not os.path.isfile("data/swears.txt"):
-        with open("data/swears.txt", "w") as f:
+        with open("data/swears.txt", "w", encoding="UTF-8") as f:
             for swear in get_swears():
                 f.write(f"{swear}\n")
 
