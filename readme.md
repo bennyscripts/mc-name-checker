@@ -4,9 +4,9 @@ It allows a bulk list of names to be checked at once to help you find your next 
 It can also send available names, updates and an archive of the available and unavailable lists to Discord.  
 
 ### Features
-> - Bulk name checking.  
-> - Discord webhook support.  
-> - Name generator with 4 pre built gens.  
+> **\-**  Bulk name checking.  
+> **\-**  Discord webhook support.  
+> **\-**  Name generator with 4 pre built gens.  
 
 ### How to use
 > First make sure you Python 3.8+ installed on your system.  
