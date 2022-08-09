@@ -2,9 +2,12 @@ import time
 import os
 import signal
 
+from utils import files
+
+files.check_files()
+
 from utils import webhooks as webhook
 from utils import checker
-from utils import files
 from utils import console
 from utils import config
 
