@@ -24,5 +24,5 @@ def is_available(name):
 
     if res.status_code == 200:
         return False
-    elif res.status_code == 204:
+    elif res.status_code == 404:
         return True
